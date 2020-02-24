@@ -1,7 +1,25 @@
 
-ul.tickets li{padding:10px;display:block; width:200px; list-style-type: none;cursor:pointer; color: #222; min-height:200px; min-width: 300px;}
+/** Menu styles **/
 
-div.board{background:url("/img/corkboard.png"); height:100%; width:100%;}
+ul.breadcrumb li{display:inline-block; list-style-type:none; margin: 0px 10px;}
+
+
+ul.tickets li{padding:10px;display:block; width:200px; list-style-type: none;cursor:pointer; color: #222; min-height:200px; min-width: 300px; border:0px; position:absolute;filter:drop-shadow(3px 3px 4px #000);}
+ul.tickets li.ui-draggable-dragging{filter:drop-shadow(15px 15px 14px #000);}
+div#controls{right:20px; top:20px; position:absolute;}
+a.newYellowLeaf{display:block; width:30px; height:30px; background: url("/img/paper_yellow.png"); border: 3px solid #ff0000;};
+div.board{ height:100%; width:100%;}
+body{background:url("/img/corkboard.png");}
+
+a{padding:2px 4px;}
+
+/** Generic thing list **/
+
+ul.itemList{ background: #fff; }
+ul.itemList li{list-style-type:none;}
+ul.itemList li a:hover{background:#ccc;}
+
+
 
  
 ul.details{ display:none; }
@@ -9,6 +27,9 @@ ul.details{ display:none; }
 li.blue{background: url("/img/paper_blue.png"); }
 li.green{background: url("/img/paper_green.png"); }
 li.yellow{background: url("/img/paper_yellow.png"); }
+
+div.menu.links a{background: #fff; color:#333; padding: 3px 5px; border-radius:2px;}
+div.menu.links a:hover{background:#ccc; color:#fff;}
 
 	@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);/*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)

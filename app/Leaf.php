@@ -18,6 +18,6 @@ class Leaf extends Model
 
     public function Style(){
     	return $this->belongsTo("\App\Style");
-    }
-    //
+    }    
+
 }

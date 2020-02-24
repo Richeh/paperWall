@@ -18,7 +18,11 @@
 	}
 
 </script>
+@endsection
 
+@section("breadcrumb")
+	<li><a href='/home'>Home</a></li>
+	<li>Books</li>
 @endsection
 
 @section("title")
@@ -28,11 +32,10 @@
 
 @section("mainContent")
 
-<ul class="tickets">
+<ul class="itemList books">
 
 	@foreach ($books as $book)
-	<li><a href = '/books/{{$book->id}}'>{{$book->title}}</a>
-	</li>
+	<li><a href = '/books/{{$book->id}}'>{{$book->title}}</a></li>
 	@endforeach
 
 @endsection

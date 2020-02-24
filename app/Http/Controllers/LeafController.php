@@ -36,7 +36,7 @@ class LeafController extends Controller
     public function store(Request $request)
     {
         if(is_int($request->input("bookId"))){
-            $book = \App\Book::find(Array("id", $request->input("bookId"));
+            $book = \App\Book::find(Array("id", $request->input("bookId")));
             $leaf = new \App\Leaf;
             $leaf->book_id = $request->input("bookId");
             if($request->input("style_id")){
@@ -44,7 +44,7 @@ class LeafController extends Controller
             }
             $leaf->save();
             $newLeafId = $leaf->id();
-            return(Array("leafId"=>$newLeafId));
+            return( Array("leafId"=>$newLeafId) );
         }
     }
 
@@ -67,20 +67,7 @@ class LeafController extends Controller
      */
     public function edit(Leaf $leaf)
     {
-        if(is_int($request->input("bookId"))){
-            $leaf = \App\Leaf::find(Array("id", $request->input("leafId")));
-            if($request->input("style_id")){
-                $leaf->style_id = $request->input("style_id");
-            }
-            if($request->input("xPos")){
-                $leaf->xPos = $request->input("xPos");
-            }
-            if($request->input("yPos")){
-                $leaf->yPos = $request->input("yPos");
-            }
-            $leaf->save();
-            return(Array("leafId"=>$newLeafId));
-        }
+       
     }
 
     /**
@@ -90,9 +77,19 @@ class LeafController extends Controller
      * @param  \App\Leaf  $leaf
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Leaf $leaf)
+    public function update( $bookId, $leafId )
     {
-        //
+        $leaf = \App\Leaf::find($leafId);
+        if($leaf){
+            $attributes = request()->validate([
+                "xPos" => "required",
+                "yPos" => "required"
+            ]);
+            $leaf->xPos = $attributes['xPos'];
+            $leaf->yPos = $attributes['yPos'];
+            $leaf->update();
+            return $leaf;
+        }
     }
 
     /**

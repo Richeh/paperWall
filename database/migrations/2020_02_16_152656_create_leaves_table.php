@@ -17,11 +17,11 @@ class CreateLeavesTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->text("content");
-            $table->integer("xPos");
-            $table->integer("yPos");
-            $table->integer("zPos");
+            $table->integer("xPos")->default(0);
+            $table->integer("yPos")->default(0);
+            $table->integer("zPos")->default(0);
             $table->integer("book_id");
-            $table->integer("style_id");
+            $table->integer("style_id")->default(1);
         });
 
         $sql="INSERT INTO paperWall.leaves (created_at,updated_at,content,xPos,yPos,zPos,book_id,`style_id`) VALUES 

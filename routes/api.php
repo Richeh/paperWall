@@ -18,6 +18,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 
-Route::get('/books/{bookId}',  function(Request $request){ return \App\Book::find(Array("id"=>$request->bookId))->first()->with("leafs"); } );
-Route::get('/leafs/{leafId}',  function(Request $request){ return \App\Leaf::find(Array("id"=>$request->leafId))->first()->with("style"); } );
+Route::get('/books/{bookId}',  					function(Request $request){ return \App\Book::find(Array("id"=>$request->bookId))->first(); } );
+Route::get('/leaves/{leafId}',  				function(Request $request){ return \App\Leaf::find(Array("id"=>$request->leafId))->first()->with("style"); } );
+Route::get('/books/{bookId}/leaves/',  			function(Request $request){ return \App\Book::find($request->bookId)->newLeaf(); } );
+Route::POST('/books/{bookId}/leaves/',  		function(Request $request){ return \App\Book::find(Array("id"=>$request->bookId))->first()->createLeaf(); } );
+Route::POST('/books/{bookId}/leaves/{leafId}',  "leafController@update"  );
 

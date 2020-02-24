@@ -19,4 +19,16 @@ class Book extends Model
     	return $this->hasMany("\App\Leaf");
     }
 
+    public function newLeaf( $style = null ){
+        $leaf = new \App\Leaf();
+        $leaf->book_id = $this->id;
+
+        if( $style ){
+            $leaf->style_id = $style;
+        }
+        $leaf->content = "";
+        $leaf->save();
+        return $leaf;
+    }
+
 }

@@ -23,16 +23,19 @@
     <body>
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="menu links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
                     @endauth
                 </div>
             @endif
-
+            <div class = 'breadcrumb'>
+                <ul class='breadcrumb'>
+                @yield("breadcrumb")
+            </ul>
+            </div>
             <div class="content">
 
                 @yield("mainContent")
