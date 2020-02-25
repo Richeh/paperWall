@@ -1,4 +1,4 @@
-@extends("templates/defaultPage")
+@extends('layouts.app')
 
 @section("scripts")
 
@@ -30,13 +30,26 @@
 @endsection
 
 
-@section("mainContent")
+@section("content")
 
-<ul class="itemList books">
 
-	@foreach ($books as $book)
-	<li><a href = '/books/{{$book->id}}'>{{$book->title}}</a></li>
-	@endforeach
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">My Books</div>
+
+				<ul class="itemList books">
+
+					@foreach ($books as $book)
+					<li><a href = '/books/{{$book->id}}'>{{$book->title}}</a></li>
+					@endforeach
+				</ul>                
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @endsection
 

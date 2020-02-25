@@ -12,12 +12,14 @@
 <script type="text/javascript">
 //TODO: hedgehog this off into its own file
 	$(document).ready(function(){
+		$(document).bookId = {{$book->id}}
 		$(".leaf").draggable();
 
 		$(".leaf").mouseup(function(){
-			position = $(this).position();
+			var position = $(this).position();
 			var leafid = $(this).attr("leafId");
-			saveLeaf( leafid , position.left, position.top );
+			var content = $(this).find("textarea").first().html()
+			saveLeaf( leafid , position.left, position.top, content );
 		});
 
 		$(".leaf").each(function(){
@@ -25,15 +27,22 @@
 			$(this).css("top", $(this).attr("yPos")+"px");
 		});
 
+		$(".leaf textarea").focusout(function(){
+			var leaf = $(this).parents("li.leaf").first();
+			var position = $(leaf).position();
+			var leafid = $(leaf).attr("leafId");
+			var content = $(leaf).find("textarea").first().html()
+			saveLeaf( leafid , position.left, position.top, content );
+		});
+
 		$(".newYellowLeaf").click(function(){
-			newLeaf(1);
+			newLeaf($(document).bookId);
 		});
 	});
 
 
 	function newLeaf( bookId ){
 		var response = $.ajax({url: "/api/books/"+bookId+"/leaves", "style":1, type:"GET", success:function(result, status, xhr){
-			console.log(result);
 			renderLeaf(result.id, result.style_id);
 		}});
 
@@ -41,16 +50,15 @@
 	}
 
 	function renderLeaf(leafId, styleId, content=""){
-		var ticket = $("ul.tickets").prepend("<li leafId='"+leafId+"' id='leaf"+leafId+"' xPos=0 yPos=0 class='yellow'><div class='content'>"+content+"</div></li>");
+		var ticket = $("ul.leaves").prepend("<li leafId='"+leafId+"' id='leaf"+leafId+"' xPos=0 yPos=0 class='yellow'><div class='content'><textarea>"+content+"</textarea></div></li>");
 		$("#leaf"+leafId).draggable();
-		console.log("rendering! "+leafId);
 	}
 
-	function saveLeaf( leafId, xPos, yPos, title, content ){
-		var bookId = 1;
-		console.log( $.ajax({url:"/api/books/"+bookId+"/leaves/"+leafId, data:{ xPos: xPos, yPos: yPos, content:content }, type:"POST", success:function(result, status, xhr){
+	function saveLeaf( leafId, xPos, yPos, content ){
+		var bookId = $(document).bookId;
+		$.ajax({url:"/api/books/"+bookId+"/leaves/"+leafId, data:{ xPos: xPos, yPos: yPos, content:content }, type:"POST", success:function(result, status, xhr){
 			console.log(result);			
-		}}));
+		}});
 	}
 
 
@@ -67,14 +75,14 @@
 @section("mainContent")
 <div class='board'>
 <div id='controls'><a class='newYellowLeaf' href = "#" id="testButton">New leaf</a></div>
-<ul class="tickets">
+<ul class="leaves">
 
 	<?php 
 	foreach ($book->Leafs()->get() as $leaf){ 
 		?>
 	<li class="leaf ui-widget-content {{$leaf->Style()->first()->styleString}}" leafId='{{$leaf->id}}' xPos='{{$leaf->xPos}}' yPos='{{$leaf->yPos}}'>
 		
-		<div class="content">{{$leaf->content}}</div>
+		<div class="content"><textarea>{{$leaf->content}}</textarea></div>
 	</li>
 	<?php } ?>
 

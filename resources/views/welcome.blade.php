@@ -81,9 +81,9 @@
                 <div class="title m-b-md">
                     PaperWall
                 </div>
-
+                <p>PaperWall is a web app for organising your thoughts; plans, schemes and jottings all given the freeform organisation of a pinboard without the practical limitations of space or storage.</p>
                 <div class="links">
-                    <a href="/books">Books</a>
+                    <a href="/books">My Books</a>
                 </div>
             </div>
         </div>
