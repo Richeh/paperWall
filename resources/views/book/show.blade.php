@@ -12,7 +12,7 @@
 <script type="text/javascript">
 //TODO: hedgehog this off into its own file
 	$(document).ready(function(){
-		$(document).bookId = {{$book->id}}
+		document.bookId = {{$book->id}};
 		$(".leaf").draggable();
 
 		$(".leaf").mouseup(function(){
@@ -31,17 +31,21 @@
 			var leaf = $(this).parents("li.leaf").first();
 			var position = $(leaf).position();
 			var leafid = $(leaf).attr("leafId");
-			var content = $(leaf).find("textarea").first().html()
+			var content = $(this).val();
+			console.log(content);
 			saveLeaf( leafid , position.left, position.top, content );
 		});
 
 		$(".newYellowLeaf").click(function(){
-			newLeaf($(document).bookId);
+			console.log("click");
+			newLeaf(document.bookId);
+			return false;
 		});
 	});
 
 
 	function newLeaf( bookId ){
+		console.log(bookId);
 		var response = $.ajax({url: "/api/books/"+bookId+"/leaves", "style":1, type:"GET", success:function(result, status, xhr){
 			renderLeaf(result.id, result.style_id);
 		}});
@@ -50,7 +54,7 @@
 	}
 
 	function renderLeaf(leafId, styleId, content=""){
-		var ticket = $("ul.leaves").prepend("<li leafId='"+leafId+"' id='leaf"+leafId+"' xPos=0 yPos=0 class='yellow'><div class='content'><textarea>"+content+"</textarea></div></li>");
+		var ticket = $("ul.leaves").prepend("<li leafId='"+leafId+"' id='leaf"+leafId+"' xPos=0 yPos=0 class='yellow leaf'><div class='content'><textarea>"+content+"</textarea></div></li>");
 		$("#leaf"+leafId).draggable();
 	}
 

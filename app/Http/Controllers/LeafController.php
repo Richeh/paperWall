@@ -83,10 +83,12 @@ class LeafController extends Controller
         if($leaf){
             $attributes = request()->validate([
                 "xPos" => "required",
-                "yPos" => "required"
+                "yPos" => "required",
+                "content" => "nullable"
             ]);
             $leaf->xPos = $attributes['xPos'];
             $leaf->yPos = $attributes['yPos'];
+            $leaf->content = $attributes['content'];
             $leaf->update();
             return $leaf;
         }
