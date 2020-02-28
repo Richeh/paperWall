@@ -23,9 +23,17 @@ class BookController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        return view("book/create", $leaves);
+        $book = new \App\Book();
+
+            $attributes = request()->validate([
+                "title" => "required"
+            ]);
+        $book->title = $attributes['title'];
+        $book->owner = 1;
+        $book->save();
+        return redirect("/books/");
     }
 
     /**
@@ -47,7 +55,7 @@ class BookController extends Controller
      */
     public function show($bookId)
     {
-        $book = \App\Book::find(Array("id",1))->first();
+        $book = \App\Book::find($bookId);
         return view("book/show", Array("book"=>$book));
     }
 
@@ -57,9 +65,10 @@ class BookController extends Controller
      * @param  \App\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function edit(Book $book)
+    public function edit($bookId)
     {
-        return view("book/edit");
+        $book = \App\Book::find($bookId);
+        return view("book/edit", Array("book"=>$book));
     }
 
     /**
@@ -69,9 +78,16 @@ class BookController extends Controller
      * @param  \App\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Book $book)
+    public function update($bookId)
     {
-        //
+        
+        $book = \App\Book::find($bookId);
+        $attributes = request()->validate([
+            "title" => "required"
+        ]);
+        $book->title = $attributes['title'];
+        $book->save();
+        return redirect("/books/".$book->id."/edit");
     }
 
     /**
@@ -80,8 +96,15 @@ class BookController extends Controller
      * @param  \App\Book  $book
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Book $book)
+    public function destroy($bookId)
     {
-        //
+        
+        $book = \App\Book::find($bookId);
+        $leaves = $book->Leafs()->get();
+        foreach( $leaves as $leaf ){
+            $leaf->delete();
+        }
+        $book->delete();
+        return redirect("/books/");
     }
 }

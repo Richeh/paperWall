@@ -24,3 +24,5 @@ Route::get('/books/{bookId}/leaves/',  			function(Request $request){ return \Ap
 Route::POST('/books/{bookId}/leaves/',  		function(Request $request){ return \App\Book::find(Array("id"=>$request->bookId))->first()->createLeaf(); } );
 Route::POST('/books/{bookId}/leaves/{leafId}',  "leafController@update"  );
 
+Route::DELETE('/books/{bookId}/leaves/{leafId}', "leafController@destroy");
+

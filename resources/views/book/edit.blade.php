@@ -1,4 +1,4 @@
-@extends("templates/layout")
+@extends("layouts.app")
 
 @section("scripts")
 
@@ -22,11 +22,40 @@
 @endsection
 
 @section("title")
-	- {{ $wall->name}}
+	- {{ $book->name}}
 @endsection
 
 
-@section("mainContent")
+@section("content")
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+
+            	<h2>{{$book->title}} - Edit</h2>
+            	<form action="/books/{{$book->id}}/" method="POST">
+            	@csrf
+				<dl>
+					<dt><label for = "title">Title</label></dt>
+					<dd><input name="title" value='{{$book->title}}' /></dd>
+				</dl>
+				<input type="submit" value="Save" />
+				</form>
+            </div>
+             <div class="card">
+
+            	<form action="/books/{{$book->id}}/" method="POST">
+            	@method("DELETE")
+            	@csrf
+				<input type="submit" value="Delete" />
+			</form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @endsection
 
 @section("links")

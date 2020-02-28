@@ -1,12 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Leaf;
 use Illuminate\Http\Request;
 
 class LeafController extends Controller
 {
+
+    public function _construct(){
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -48,6 +52,12 @@ class LeafController extends Controller
         }
     }
 
+    public function delete( $bookId, $leafId){
+        $leaf = \App\Leaf::find( $leafId);
+            $leaf->delete();
+        return (Array("id"=>$leafId));
+    }
+
     /**
      * Display the specified resource.
      *
@@ -86,9 +96,11 @@ class LeafController extends Controller
                 "yPos" => "required",
                 "content" => "nullable"
             ]);
+
             $leaf->xPos = $attributes['xPos'];
             $leaf->yPos = $attributes['yPos'];
             $leaf->content = $attributes['content'];
+            if( !$leaf->content ){ $leaf->content = "";}
             $leaf->update();
             return $leaf;
         }

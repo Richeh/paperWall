@@ -14,6 +14,10 @@ class Book extends Model
     public $timestamps = false; 
 
     //
+    public function _construct(){
+        $this->middleware('auth');
+    }
+
 
     public function Leafs(){
     	return $this->hasMany("\App\Leaf");

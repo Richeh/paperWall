@@ -1,0 +1,1073 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bas",
+				"basicallyYes"
+			],
+			[
+				"attr",
+				"attributes"
+			],
+			[
+				"list",
+				"list-style-type\tproperty"
+			],
+			[
+				"filety",
+				"filetypes"
+			],
+			[
+				"ext",
+				"extensionsOfType"
+			],
+			[
+				"I",
+				"ItemGroup"
+			],
+			[
+				"dire",
+				"directory"
+			],
+			[
+				"Sub",
+				"SubDirectories"
+			],
+			[
+				"explo",
+				"explodedPath"
+			],
+			[
+				"patharra",
+				"pathArray"
+			],
+			[
+				"di",
+				"directory"
+			],
+			[
+				"scan",
+				"Scan"
+			],
+			[
+				"table",
+				"tableify"
+			],
+			[
+				"cus",
+				"customerId"
+			],
+			[
+				"fore",
+				"forecast"
+			],
+			[
+				"date",
+				"datePicker"
+			],
+			[
+				"inli",
+				"inline-block\tdisplay"
+			],
+			[
+				"over",
+				"overflow-x\tproperty"
+			],
+			[
+				"backgroun",
+				"background-size\tproperty"
+			],
+			[
+				"backgrou",
+				"background-size\tproperty"
+			],
+			[
+				"suppl",
+				"supplierCode"
+			],
+			[
+				"productC",
+				"productCostPrice"
+			],
+			[
+				"Forecast",
+				"ForecastRevision"
+			],
+			[
+				"supp",
+				"supplierId"
+			],
+			[
+				"produc",
+				"productListEntries"
+			],
+			[
+				"suba",
+				"subassembly"
+			],
+			[
+				"subass",
+				"subassembly"
+			],
+			[
+				"sub",
+				"subassembly"
+			],
+			[
+				"compon",
+				"components"
+			],
+			[
+				"comp",
+				"component"
+			],
+			[
+				"compo",
+				"components"
+			],
+			[
+				"Prod",
+				"ProductComponents"
+			],
+			[
+				"Product",
+				"ProductComponents"
+			],
+			[
+				"prodc",
+				"ProductComponents"
+			],
+			[
+				"PRoduct",
+				"ProductComponents"
+			],
+			[
+				"parent",
+				"parentObject"
+			],
+			[
+				"required",
+				"requiredValues"
+			],
+			[
+				"quan",
+				"quantityAvailable"
+			],
+			[
+				"quantity",
+				"quantityAssigned"
+			],
+			[
+				"assignation",
+				"assignationStats"
+			],
+			[
+				"requi",
+				"requiredValues"
+			],
+			[
+				"prodcat",
+				"prodcat"
+			],
+			[
+				"current",
+				"currentRow"
+			],
+			[
+				"assem",
+				"assemblyTable"
+			],
+			[
+				"stock",
+				"stockId"
+			],
+			[
+				"prod",
+				"product_id"
+			],
+			[
+				"su",
+				"supplyOrderId"
+			],
+			[
+				"pro",
+				"products"
+			],
+			[
+				"ps",
+				"possibleProducts"
+			],
+			[
+				"res",
+				"results"
+			],
+			[
+				"pos",
+				"possibleProducts"
+			],
+			[
+				"ambig",
+				"ambiguousOrders"
+			],
+			[
+				"asso",
+				"assignedToProduct"
+			],
+			[
+				"assi",
+				"assignedToProduct"
+			],
+			[
+				"forecas",
+				"forecastRevision"
+			],
+			[
+				"Stoc",
+				"stockOnOrder"
+			],
+			[
+				"availa",
+				"availableUnits"
+			],
+			[
+				"Produc",
+				"ProductCategory"
+			],
+			[
+				"stoc",
+				"stockOnOrder"
+			],
+			[
+				"forecast",
+				"forecastQty"
+			],
+			[
+				"resu",
+				"result"
+			],
+			[
+				"content",
+				"contentBlock"
+			],
+			[
+				"run",
+				"runOutOnDate"
+			],
+			[
+				"runou",
+				"runOutOnDate"
+			],
+			[
+				"order",
+				"orderBy"
+			],
+			[
+				"tota",
+				"totalAvailable"
+			],
+			[
+				"ava",
+				"availableUnits"
+			],
+			[
+				"total",
+				"totalOrders"
+			],
+			[
+				"this",
+				"thisOrderCount"
+			],
+			[
+				"supplier",
+				"supplierOrderBalance"
+			],
+			[
+				"render",
+				"renderChart"
+			],
+			[
+				"com",
+				"compileData"
+			],
+			[
+				"modal",
+				"modalLink"
+			],
+			[
+				"Foreca",
+				"ForecastRevision"
+			],
+			[
+				"revision",
+				"svn_fs_revision_prop"
+			],
+			[
+				"produ",
+				"productId"
+			],
+			[
+				"dateS",
+				"datestring"
+			],
+			[
+				"product",
+				"productId"
+			],
+			[
+				"data",
+				"dataArray"
+			],
+			[
+				"datatable",
+				"datatable"
+			],
+			[
+				"selected",
+				"selectedSupplier"
+			],
+			[
+				"moda",
+				"modaliseForecast"
+			],
+			[
+				"Fore",
+				"ForecastRevision"
+			],
+			[
+				"Produ",
+				"ProductCategorys"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"for",
+				"forecastRow"
+			],
+			[
+				"Aja",
+				"AjaxController"
+			],
+			[
+				"productCa",
+				"ProductCategorys"
+			],
+			[
+				"pr",
+				"productSelector"
+			],
+			[
+				"lead",
+				"leadTimeMax"
+			],
+			[
+				"inle",
+				"inline-block\tdisplay"
+			],
+			[
+				"random",
+				"randomSentence"
+			],
+			[
+				"length",
+				"mssql_field_length"
+			],
+			[
+				"text",
+				"textarea"
+			],
+			[
+				"xport_supp",
+				"xport_suppliers"
+			],
+			[
+				"xport_prod",
+				"xport_productassembly"
+			],
+			[
+				"xport_pro",
+				"xport_product"
+			],
+			[
+				"Contro",
+				"Controller"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/User.php",
+			"settings":
+			{
+				"buffer_size": 789,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes/api.php",
+			"settings":
+			{
+				"buffer_size": 1245,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"PREFERENCES",
+				"Preferences: Settings"
+			],
+			[
+				"material",
+				"Material Theme: Activate theme"
+			],
+			[
+				"material theme",
+				"Material Theme: Activate theme"
+			],
+			[
+				"packages setting",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"package",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"bulma",
+				"Snippet: bulma-submit"
+			],
+			[
+				"bulma-form",
+				"Snippet: bulma-form-with-icons"
+			],
+			[
+				"bulma-input",
+				"Snippet: bulma-input"
+			],
+			[
+				"bulma-inpu",
+				"Snippet: bulma-input"
+			],
+			[
+				"bulma-text",
+				"Snippet: bulma-textarea"
+			],
+			[
+				"blade",
+				"Set Syntax: Laravel Blade"
+			],
+			[
+				"syntax lara",
+				"Set Syntax: Laravel Blade"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 158.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/cakeo/code/paperWall3",
+		"/C/Users/cakeo/code/paperWall3/app",
+		"/C/Users/cakeo/code/paperWall3/app/Http",
+		"/C/Users/cakeo/code/paperWall3/app/Http/Controllers",
+		"/C/Users/cakeo/code/paperWall3/database",
+		"/C/Users/cakeo/code/paperWall3/public",
+		"/C/Users/cakeo/code/paperWall3/resources",
+		"/C/Users/cakeo/code/paperWall3/resources/views",
+		"/C/Users/cakeo/code/paperWall3/resources/views/book",
+		"/C/Users/cakeo/code/paperWall3/resources/views/layouts",
+		"/C/Users/cakeo/code/paperWall3/resources/views/templates",
+		"/C/Users/cakeo/code/paperWall3/routes"
+	],
+	"file_history":
+	[
+		"/C/Users/cakeo/code/paperWall3/routes/web.php",
+		"/C/Users/cakeo/code/paperWall3/app/Http/Controllers/LeafController.php",
+		"/C/Users/cakeo/code/paperWall3/app/Book.php",
+		"/C/Users/cakeo/code/paperWall3/app/Style.php",
+		"/C/Users/cakeo/code/paperWall3/database/migrations/2020_02_16_152656_create_leaves_table.php",
+		"/C/Users/cakeo/code/paperWall3/routes/api.php",
+		"/C/Users/cakeo/code/paperWall3/app/Leaf.php",
+		"/C/Users/cakeo/code/paperWall3/resources/views/book/index.blade.php",
+		"/C/Users/cakeo/code/paperWall3/resources/views/welcome.blade.php",
+		"/C/Users/cakeo/code/paperWall3/public/css/app.css",
+		"/C/Users/cakeo/code/paperWall3/resources/views/templates/defaultPage.blade.php",
+		"/C/Users/cakeo/code/paperWall3/resources/views/home.blade.php",
+		"/C/Users/cakeo/code/paperWall3/resources/views/book/show.blade.php",
+		"/C/Users/cakeo/code/paperWall3/app/Http/Controllers/BookController.php",
+		"/C/Users/cakeo/code/paperWall3/database/migrations/2020_02_17_000508_create_styles_table.php",
+		"/C/Users/cakeo/code/paperWall3/database/migrations/2020_02_16_152727_create_books_table.php",
+		"/C/Users/cakeo/code/paperWall3/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/Users/cakeo/code/paperWall3/app/User.php",
+		"/C/Users/cakeo/code/paperWall3/resources/views/walls/edit.blade.php",
+		"/C/Users/cakeo/code/paperWall2/.env",
+		"/C/Users/cakeo/code/paperWall/app/Http/Controllers/LeafController.php",
+		"/C/Users/cakeo/code/paperWall/app/Http/Controllers/StyleController.php",
+		"/C/Users/cakeo/code/paperWall/routes/web.php",
+		"/C/Users/cakeo/code/paperWall/app/Http/Controllers/BookController.php",
+		"/C/Users/cakeo/code/paperWall/database/migrations/2020_02_16_152656_create_leaves_table.php",
+		"/C/Users/cakeo/code/paperWall/.env",
+		"/C/Users/cakeo/code/paperWall/database/migrations/2020_02_17_000508_create_styles_table.php",
+		"/C/Users/cakeo/code/paperWall/database/migrations/2020_02_16_152727_create_books_table.php",
+		"/C/Users/cakeo/code/qwiki/app/Http/Controllers/knowledgeController.php",
+		"/C/Users/cakeo/code/qwiki/routes/web.php",
+		"/C/Users/cakeo/code/qwiki/database/migrations/2020_02_08_141954_setup_tables.php",
+		"//DIETPI/pup/resources/views/home.blade.php",
+		"//DIETPI/pup/app/Http/Controllers/ItemGroupController.php",
+		"//DIETPI/pup/resources/views/group/index.blade.php",
+		"//DIETPI/pup/public/css/main.css",
+		"//DIETPI/pup/routes/web.php",
+		"//DIETPI/pup/app/Directory.php",
+		"//DIETPI/pup/database/migrations/2019_11_19_192528_subjects.php",
+		"//DIETPI/pup/resources/views/index.blade.php",
+		"//DIETPI/pup/resources/views/subjects/index.blade.php",
+		"//DIETPI/pup/app/ItemGroup.php",
+		"//DIETPI/pup/app/Http/Controllers/SubjectController.php",
+		"//DIETPI/pup/app/Subject.php",
+		"//DIETPI/pup/laravel/resources/views/welcome.blade.php",
+		"//DIETPI/pup/app/Http/Controllers/FileController.php",
+		"//DIETPI/pup/laravel/app/Http/Controllers/Auth/RegisterController.php",
+		"//DIETPI/pup/resources/views/layout.blade.php",
+		"//DIETPI/pup/resources/views/layouts/app.blade.php",
+		"//DIETPI/pup/resources/views/welcome.blade.php",
+		"//192.168.178.100/pup/app/ItemGroup.php",
+		"//192.168.178.100/pup/app/Http/Controllers/ImageController.php",
+		"//192.168.178.100/pup/app/Http/Controllers/ItemGroupController.php",
+		"//192.168.178.100/pup/app/Directory.php",
+		"//192.168.178.100/pup/app/Http/Controllers/SubjectController.php",
+		"//192.168.178.100/pup/app/Subject.php",
+		"//192.168.178.100/pup/routes/web.php",
+		"//192.168.178.100/pup/database/migrations/2019_11_19_192528_subjects.php",
+		"//192.168.178.100/pup/app/File.php",
+		"//192.168.178.100/pup/resources/views/subjects/view.blade.php",
+		"//192.168.178.100/pup/resources/views/subjects/index.blade.php",
+		"//192.168.178.100/pup/public/css/main.css",
+		"//192.168.178.100/pup/resources/views/layout.blade.php",
+		"//192.168.178.100/pup/resources/views/images/index.blade.php",
+		"//192.168.178.100/pup/resources/views/group/index.blade.php",
+		"//192.168.178.100/pup/.env",
+		"//192.168.178.100/pup/resources/views/index.blade.php",
+		"/C/Users/cakeo/code/mrp/app/Forecast.php",
+		"/C/Users/cakeo/code/mrp/resources/views/forecastRevisions/show.blade.php",
+		"/C/Users/cakeo/code/0Tpup/database/seeds/seedImages.php",
+		"/C/Users/cakeo/code/mrp/database/seeds/add_default_users.php",
+		"/C/Users/cakeo/code/mrp/database/seeds/DatabaseSeeder.php",
+		"/C/Users/cakeo/code/mrp/routes/web.php",
+		"/C/Users/cakeo/code/0Tpup/routes/web.php",
+		"/C/Users/cakeo/code/0Tpup/resources/views/layout.blade.php",
+		"/C/Users/cakeo/code/0Tpup/resources/views/images/index.blade.php",
+		"/C/Users/cakeo/code/0Tpup/database/migrations/2019_11_19_192528_subjects.php",
+		"/C/Users/cakeo/code/0Tpup/app/Directory.php",
+		"/C/Users/cakeo/code/mrp/app/Http/Controllers/AjaxController.php",
+		"/C/Users/cakeo/code/0Tpup/app/Image.php",
+		"/C/Users/cakeo/code/0Tpup/app/Http/Controllers/SubjectController.php",
+		"/C/Users/cakeo/code/0Tpup/app/Http/Controllers/DirectoryController.php",
+		"/C/Users/cakeo/code/0Tpup/app/Http/Controllers/ImageController.php",
+		"/C/Users/cakeo/code/0Tpup/app/Http/Controllers/GroupController.php",
+		"/C/Users/cakeo/code/0Tpup/app/ItemGroup.php",
+		"/C/Users/cakeo/code/0Tpup/app/Subject.php",
+		"/C/Users/cakeo/code/mrp/app/Customer.php",
+		"/C/Users/cakeo/code/0Tpup/vendor/phpunit/phpunit/tests/end-to-end/group.phpt",
+		"/C/Users/cakeo/code/mrp/app/Http/Controllers/ProductController.php",
+		"/C/Users/cakeo/code/mrp/resources/views/layout.blade.php",
+		"/C/Users/cakeo/code/mrp/resources/views/customers/index.blade.php",
+		"/C/Users/cakeo/code/0Tpup/database/seeds/seedDatabase.php",
+		"/C/Users/cakeo/code/0Tpup/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/Users/cakeo/code/thoughts/database/seeds/add_spurious_users.php",
+		"/C/Users/cakeo/code/thoughts/database/seeds/DatabaseSeeder.php",
+		"/C/Users/cakeo/code/mrp/resources/views/forecasts/index.blade.php",
+		"/C/Users/cakeo/code/thoughts/app/User.php",
+		"/C/Users/cakeo/code/thoughts/app/Thought.php",
+		"/C/Users/cakeo/code/thoughts/app/ThoughtCategory.php",
+		"/C/Users/cakeo/code/thoughts/app/Http/Controllers/thoughtController.php",
+		"/C/Users/cakeo/code/thoughts/routes/web.php",
+		"/C/Users/cakeo/code/thoughts/resources/views/layouts/page.blade.php",
+		"/C/Users/cakeo/code/thoughts/resources/views/thoughts/index.blade.php",
+		"/C/Users/cakeo/code/thoughts/resources/views/welcome.blade.php",
+		"/C/Users/cakeo/code/thoughts/database/migrations/2019_11_06_012800_thoughts_table.php",
+		"/C/Users/cakeo/code/thoughts/composer.json",
+		"/C/Users/cakeo/code/thoughts/.env",
+		"/C/Users/cakeo/code/thoughts/app/thought.php",
+		"/C/Users/cakeo/vue/index.html",
+		"/C/Users/cakeo/code/mrp/resources/views/orders/OrderRequirement.blade.php",
+		"/C/Users/cakeo/code/mrp/public/css/app.css",
+		"/C/Users/cakeo/code/mrp/app/ForecastRevision.php",
+		"/C/Users/cakeo/code/mrp/app/Http/Controllers/ForecastRevisionController.php",
+		"/C/Users/cakeo/code/mrp/app/Listeners/UserLoggedIn.php",
+		"/C/Users/cakeo/code/mrp/app/Providers/EventServiceProvider.php",
+		"/C/Users/cakeo/code/mrp/app/Http/Controllers/DatabaseMonitorController.php",
+		"/C/Users/cakeo/code/mrp/resources/views/suppliers/index.blade.php",
+		"/C/Users/cakeo/Desktop/patch/addTemplate.sql",
+		"/C/Users/cakeo/code/mrp/app/ProductStock.php",
+		"/C/Users/cakeo/code/mrp/app/Supplier.php",
+		"/C/Users/cakeo/code/mrp/app/Http/Controllers/SupplierController.php",
+		"/C/Users/cakeo/code/mrp/app/Product.php",
+		"/C/Users/cakeo/code/mrp/resources/views/suppliers/show.blade.php",
+		"/C/Users/cakeo/code/mrp/app/Location.php",
+		"/C/Users/cakeo/code/mrp/resources/views/products/gui.blade.php",
+		"/C/Users/cakeo/code/mrp/resources/views/layouts/app.blade.php",
+		"/C/Users/cakeo/code/mrp/resources/views/layouts/framed.blade.php",
+		"/C/Users/cakeo/code/mrp/resources/views/layouts/framed.blade",
+		"/C/Users/cakeo/code/mrp/app/Http/Controllers/SupplyOrderController.php"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"C:\\Users\\cakeo\\code\\mrp"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"tickets",
+			"()}}\"",
+			"red",
+			"defaultPage",
+			"BookController",
+			"Scan",
+			"();",
+			"register",
+			"\"=>\"\");",
+			"productDrillDown",
+			"remove",
+			"breakDown",
+			"tableify",
+			"tableif",
+			"tableify",
+			"customer",
+			"tableify",
+			"dateDates",
+			"breakdown",
+			"breakdownForecastRow",
+			"breakd",
+			"ajax",
+			":\");",
+			"forecastStock",
+			"header",
+			"pivot",
+			"displayProduct",
+			"suppliersProducts",
+			"location",
+			"productListEntries",
+			"user",
+			"create",
+			") ",
+			"assignationStatus",
+			"unassigned",
+			"hide",
+			"insuffic",
+			"insufficien",
+			"assignationStatus",
+			"unassignedStock",
+			"yellow",
+			"class",
+			"->stock",
+			"forecastStock",
+			"::getDates(",
+			"product_assembly",
+			"forecastrevisiondates",
+			"subassembly",
+			"forecastStock",
+			"productsOnAssembly",
+			"find",
+			"forecastStock",
+			"\t\n",
+			"stockOnOrder",
+			"alert",
+			"maxL",
+			"forecastRevision",
+			"forecastorders",
+			"getDates_WRONG",
+			"orderBy",
+			"stockOnOrder",
+			"productCode",
+			"quantity",
+			"dateObjects",
+			"        \n",
+			"container",
+			"header",
+			" .",
+			"dateColumns",
+			"reqBy",
+			"orderForecasts",
+			"period",
+			"forecastRevision",
+			"//   ",
+			"console.log",
+			"]]);",
+			"dateArray",
+			"apply",
+			"));}},",
+			"auth",
+			"datestring",
+			"showForecastOrders",
+			"loc",
+			"();",
+			"only_full_group_by",
+			"$Suppliers",
+			"products",
+			"Products",
+			"products",
+			"produc",
+			"dd(",
+			"attributes",
+			"dd",
+			"Create",
+			"App",
+			"MRP"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$suppliers",
+			"suppliers",
+			"Suppliers",
+			"suppliers"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/User.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 789,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								354,
+								354
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "routes/api.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1245,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1168,
+								1168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 67.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "paperwall3.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main.css",
+				"pup\\public\\css\\main.css"
+			],
+			[
+				"subject index",
+				"pup\\resources\\views\\subjects\\index.blade.php"
+			],
+			[
+				"group index",
+				"pup\\resources\\views\\group\\index.blade.php"
+			],
+			[
+				"subject ined",
+				"pup\\resources\\views\\subjects\\index.blade.php"
+			],
+			[
+				"group contr",
+				"app\\Http\\Controllers\\ItemGroupController.php"
+			],
+			[
+				"group inde",
+				"resources\\views\\group\\index.blade.php"
+			],
+			[
+				"group contro",
+				"app\\Http\\Controllers\\ItemGroupController.php"
+			],
+			[
+				"groupcont",
+				"app\\Http\\Controllers\\ItemGroupController.php"
+			],
+			[
+				"main",
+				"public\\css\\main.css"
+			],
+			[
+				"",
+				"resources\\views\\group\\index.blade.php"
+			],
+			[
+				"itemgroup",
+				"app\\Http\\Controllers\\ItemGroupController.php"
+			],
+			[
+				"web",
+				"routes\\web.php"
+			],
+			[
+				"itemgr",
+				"app\\ItemGroup.php"
+			],
+			[
+				"subjectindex",
+				"resources\\views\\subjects\\index.blade.php"
+			],
+			[
+				"subjec",
+				"app\\Subject.php"
+			],
+			[
+				"di",
+				"app\\Directory.php"
+			],
+			[
+				"direc",
+				"app\\Directory.php"
+			],
+			[
+				"item",
+				"app\\ItemGroup.php"
+			],
+			[
+				"group",
+				"app\\ItemGroup.php"
+			],
+			[
+				"dire",
+				"app\\Directory.php"
+			],
+			[
+				"image",
+				"app\\Image.php"
+			],
+			[
+				"subj",
+				"app\\Subject.php"
+			],
+			[
+				"sub",
+				"app\\Subject.php"
+			],
+			[
+				"direct",
+				"app\\Directory.php"
+			],
+			[
+				"routesweb",
+				"routes\\web.php"
+			],
+			[
+				"indexp",
+				"resources\\views\\images\\index.blade.php"
+			],
+			[
+				"layou",
+				"resources\\views\\layout.blade.php"
+			],
+			[
+				"imagesbla",
+				"resources\\views\\images\\index.blade.php"
+			],
+			[
+				"subject",
+				"app\\Subject.php"
+			],
+			[
+				"imageblad",
+				"resources\\views\\images\\index.blade.php"
+			],
+			[
+				"imagecon",
+				"app\\Http\\Controllers\\ImageController.php"
+			],
+			[
+				"eventservi",
+				"app\\Providers\\EventServiceProvider.php"
+			],
+			[
+				"eventser",
+				"app\\Providers\\EventServiceProvider.php"
+			],
+			[
+				"welcome",
+				"resources\\views\\welcome.blade.php"
+			],
+			[
+				"routes/wb",
+				"routes\\web.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 374.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -37,14 +37,24 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">My Books</div>
 
+            	<h2>My Books</h2>
 				<ul class="itemList books">
 
 					@foreach ($books as $book)
-					<li><a href = '/books/{{$book->id}}'>{{$book->title}}</a></li>
+					<li><a href = '/books/{{$book->id}}'>{{$book->title}}</a> - <a href = '/books/{{$book->id}}/edit'>edit</a></li>
 					@endforeach
 				</ul>                
+            </div>
+            <div class="card">
+                <div class="card-header">Create new Book</div>
+            	<form action = "/books/" method="POST" >
+            		@method("POST")
+            		@csrf
+            		<label for="title">Title</label>
+            		<input name='title' id="title"/>
+            		<input type="submit" value = "Create" />
+            	</form>
             </div>
         </div>
     </div>

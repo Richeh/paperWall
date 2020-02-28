@@ -21,6 +21,7 @@
       
     </head>
     <body>
+        <nav class="">
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="menu links">
@@ -36,6 +37,7 @@
                 @yield("breadcrumb")
             </ul>
             </div>
+        </div></nav>
             <div class="content">
 
                 @yield("mainContent")

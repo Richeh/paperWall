@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Style extends Model
 {
 
+    public function _construct(){
+        $this->middleware('auth');
+    }
+
 	protected $table = "styles";
 	protected $primaryKey = "id";
 	public $incrementing = true;
