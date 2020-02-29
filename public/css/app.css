@@ -25,7 +25,9 @@ li.leaf.ui-draggable-dragging{filter:drop-shadow(15px 15px 14px #000);}
 li.blue, a.blue{background: url("/img/paper_blue.png"); }
 li.green, a.green{background: url("/img/paper_green.png"); }
 li.yellow, a.yellow{background: url("/img/paper_yellow.png"); }
-li.leaf textarea{border:0px; background-color:transparent; width:300px; height:200px; font-size:2em;}
+li.leaf textarea{border:0px; background-color:transparent; width:300px; height:200px; font-size:2em; line-height:0.8em;}
+li.leaf a.deleteLink{font-size: 1.2em; float:right; line-height:1em;}
+li.leaf a.deleteLink:hover{color:#ccc; background:#000;}
 
 
 div.board{ height:100%; width:100%;}

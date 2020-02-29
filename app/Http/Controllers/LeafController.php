@@ -52,11 +52,7 @@ class LeafController extends Controller
         }
     }
 
-    public function delete( $bookId, $leafId){
-        $leaf = \App\Leaf::find( $leafId);
-            $leaf->delete();
-        return (Array("id"=>$leafId));
-    }
+
 
     /**
      * Display the specified resource.
@@ -112,9 +108,11 @@ class LeafController extends Controller
      * @param  \App\Leaf  $leaf
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Leaf $leaf)
-    {
-        //
+    public function destroy($bookId, $leafId){
+        $leaf = \App\Leaf::find( $leafId);
+            $leaf->delete();
+        return (Array("id"=>$leafId));
+    
     }
 
     public function Style(){

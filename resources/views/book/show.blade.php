@@ -13,27 +13,14 @@
 //TODO: hedgehog this off into its own file
 	$(document).ready(function(){
 		document.bookId = {{$book->id}};
-		$(".leaf").draggable();
-
-		$(".leaf").mouseup(function(){
-			var position = $(this).position();
-			var leafid = $(this).attr("leafId");
-			var content = $(this).find("textarea").first().html()
-			saveLeaf( leafid , position.left, position.top, content );
-		});
-
+		
 		$(".leaf").each(function(){
 			$(this).css("left", $(this).attr("xPos")+"px");
 			$(this).css("top", $(this).attr("yPos")+"px");
+			addEvents($(this));
 		});
 
-		$(".leaf textarea").focusout(function(){
-			var leaf = $(this).parents("li.leaf").first();
-			var position = $(leaf).position();
-			var leafid = $(leaf).attr("leafId");
-			var content = $(this).val();
-			saveLeaf( leafid , position.left, position.top, content );
-		});
+		
 
 		$(".newLeaf").click(function(){
 			var leafColor = $(this).leafColor;
@@ -44,8 +31,6 @@
 
 
 	function newLeaf( bookId, leafStyle){
-		console.log(bookId);
-
 		var leafStyleIds = {yellow:1, blue:2, green:3};
 		var response = $.ajax({url: "/api/books/"+bookId+"/leaves", "style":leafStyleIds.leafStyle, type:"GET", success:function(result, status, xhr){
 			renderLeaf(result.id, result.style_id);
@@ -54,43 +39,54 @@
 	}
 
 	function renderLeaf(leafId, styleId, content=""){
-		var ticket = $("ul.leaves").prepend("<li id='leaf"+leafId+"' leafId='"+leafId+"' id='leaf"+leafId+"' xPos=0 yPos=0 class='yellow leaf'><form method='POST' action='/api/books/{{$book->id}}/leaves/"+leafId+"'><input type='hidden' name='_method' value='DELETE'><input type='submit' value='X' ></input></form><div class='content'><textarea>"+content+"</textarea></div></li>");
-		$("#leaf"+leafId).draggable();
-		$("#leaf"+leafId+" .delete").click(function(){ deleteLeaf($(this).attr("leafid")); return false; });
-		$("#leaf"+leafId+" textarea").focusout(function(){
-			var leaf = $(this).parents("li.leaf").first();
-			var position = $(leaf).position();
-			var leafid = $(leaf).attr("leafId");
-			var content = $(this).val();
-			saveLeaf( leafid , position.left, position.top, content );
+		var ticket = $("ul.leaves").prepend("<li id='leaf"+leafId+"' leafId='"+leafId+"' id='leaf"+leafId+"' xPos=0 yPos=0 class='yellow leaf ui-widget-content'><a href='#' class='deleteLink'>X</a><div class='content'><textarea>"+content+"</textarea></div></li>");
+		
+		addEvents($('#leaf'+leafId));
+	}
+
+//Add JS events to a newly created Leaf entity
+	function addEvents( leaf ){
+		console.log(leaf);
+		//Make draggable
+		$(leaf).draggable();
+		// Delete link
+		$(leaf).find("a.deleteLink").click(function(){
+			deleteLeaf($(this).parents("li").first().attr("leafId"));
+			return false;
 		});
-		$("#leaf"+leafId).mouseup(function(){
-			var position = $(this).position();
-			var leafid = $(this).attr("leafId");
-			var content = $(this).find("textarea").first().html()
-			saveLeaf( leafid , position.left, position.top, content );
-		});
+		//Save on losing focus of textarea
+		$(leaf).find("textarea").focusout(function(){
+			saveLeaf($(this).parents("li.leaf").first().attr("leafId"));			
+		});		
+		//Save on moving
+		$(leaf).mouseup(function(){
+			saveLeaf( $(leaf).attr("leafId") );
+		}); 
 
 	}
 
-	function saveLeaf( leafId, xPos, yPos, content ){
+	function saveLeaf( leafId ){
+		var leaf = $("#leaf"+leafId);
 		var bookId = $(document).bookId;
-		$.ajax({url:"/api/books/"+bookId+"/leaves/"+leafId, data:{ xPos: xPos, yPos: yPos, content:content }, type:"POST", success:function(result, status, xhr){
+		$.ajax({url:"/api/books/"+bookId+"/leaves/"+$(leaf).attr("leafId"), data:{ 
+			xPos: $(leaf).position().left, 
+			yPos: $(leaf).position().top, 
+			content:$(leaf).find("textarea").first().val() }, type:"POST", success:function(result, status, xhr){
 		}});
+
+	}
 
 	function deleteLeaf(leafId){
 		console.log("deleting "+leafId);
 		var leaf = $("#leaf"+leafId);
-
 		var response = $.ajax({
-				url:"/api/books/"+bookId+"/leaves/"+leafId, 
+				url:"/api/books/1/leaves/"+leafId, 
 				type:"POST", 
 				data:{ _method:"DELETE"}, 
 				success: function(result, status, xhr){
-					$("#leaf"+result.leafId).remove();
+					$("#leaf"+result.id).remove();
 				}
 			});
-	}
 	}
 
 
@@ -118,7 +114,7 @@
 	foreach ($book->Leafs()->get() as $leaf){ 
 		?>
 	<li id="leaf{{$leaf->id}}" class="leaf ui-widget-content {{$leaf->Style()->first()->styleString}}" leafId='{{$leaf->id}}' xPos='{{$leaf->xPos}}' yPos='{{$leaf->yPos}}'>
-		<form method='POST' action='/api/books/{{$book->id}}/leaves/{{$leaf->id}}'><input type='hidden' name='_method' value='DELETE'><input type='submit' value='X' ></input></form>
+		<a href='#' class='deleteLink'>X</a>
 		<div class="content"><textarea>{{$leaf->content}}</textarea></div>
 	</li>
 	<?php } ?>
