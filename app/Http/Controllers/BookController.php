@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Book;
+use Auth;
 use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
+
+
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +24,8 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = \App\Book::all();
+        $books = Auth::User()->books()->get();
+      //  dd($books);
         return view("book/index", Array("books"=>$books));
     }
 
@@ -31,7 +42,7 @@ class BookController extends Controller
                 "title" => "required"
             ]);
         $book->title = $attributes['title'];
-        $book->owner = 1;
+        $book->user_id = Auth::User()->id;
         $book->save();
         return redirect("/books/");
     }
