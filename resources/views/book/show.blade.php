@@ -1,6 +1,5 @@
 @extends("templates/defaultPage")
 
-
 @section("breadcrumb")
 	<li><a href='/home'>Home</a></li>
 	<li><a href='/books/'>Books</a></li>
@@ -22,33 +21,38 @@
 
 		
 
-		$(".newLeaf").click(function(){
-			var leafColor = $(this).leafColor;
-			newLeaf(document.bookId, leafColor);
+		$(".newLeaf").click(function( event ){
+			var leafColor = $(this).attr("leafcolor");
+			newLeaf(document.bookId, leafColor, event.clientX, event.clientY);
 			return false;
 		});
 	});
 
 
-	function newLeaf( bookId, leafStyle){
-		var leafStyleIds = {yellow:1, blue:2, green:3};
-		var response = $.ajax({url: "/api/books/"+bookId+"/leaves", "style":leafStyleIds.leafStyle, type:"GET", success:function(result, status, xhr){
-			renderLeaf(result.id, result.style_id);
+	function newLeaf( bookId, leafStyle, posX, posY){
+		var leafStyleIds = {"yellow":1, "blue":2, "green":3};
+		console.log(leafStyle+":"+leafStyleIds[leafStyle]);
+		var response = $.ajax({url: "/api/books/"+bookId+"/leaves", "style":leafStyleIds[leafStyle], type:"GET", success:
+			function(result, status, xhr){
+			var leaf = renderLeaf(result.id, result.style_id);
+			posX = posX - leaf.width();
+			leaf.css({left: posX, top: posY});			
+			saveLeaf( $(leaf).attr("leafId") );
 		}});
 		return false;
 	}
 
 	function renderLeaf(leafId, styleId, content=""){
 		var ticket = $("ul.leaves").prepend("<li id='leaf"+leafId+"' leafId='"+leafId+"' id='leaf"+leafId+"' xPos=0 yPos=0 class='yellow leaf ui-widget-content'><a href='#' class='deleteLink'>X</a><div class='content'><textarea>"+content+"</textarea></div></li>");
-		
-		addEvents($('#leaf'+leafId));
+		var leaf =$('#leaf'+leafId); 
+		addEvents( leaf );
+		return ( leaf );
 	}
 
 //Add JS events to a newly created Leaf entity
 	function addEvents( leaf ){
-		console.log(leaf);
 		//Make draggable
-		$(leaf).draggable();
+		$(leaf).draggable({scroll:true, stack:"#set div"});
 		// Delete link
 		$(leaf).find("a.deleteLink").click(function(){
 			deleteLeaf($(this).parents("li").first().attr("leafId"));
@@ -103,9 +107,9 @@
 @section("mainContent")
 <div class='board'>
 <div id='controls'>
-	<a class='newLeaf yellow' leafColor = "yellow" href = "#" id="testButton">New leaf</a>
-	<a class='newLeaf blue' leafColor = "blue" href = "#" id="testButton">New leaf</a>
-	<a class='newLeaf green' leafColor = "green" href = "#" id="testButton">New leaf</a>
+	<a class='newLeaf yellow' 	leafColor = "yellow" 	href = "#" id="testButton">+</a>
+	<a class='newLeaf blue' 	leafColor = "blue" 		href = "#" id="testButton">+</a>
+	<a class='newLeaf green' 	leafColor = "green" 	href = "#" id="testButton">+</a>
 
 </div>
 <ul class="leaves">

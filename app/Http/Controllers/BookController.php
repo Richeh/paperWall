@@ -67,7 +67,10 @@ class BookController extends Controller
     public function show($bookId)
     {
         $book = \App\Book::find($bookId);
-        return view("book/show", Array("book"=>$book));
+        if(Auth::User()->id == $book->user_id){
+            return view("book/show", Array("book"=>$book));
+        }
+        return redirect("/books");
     }
 
     /**
@@ -78,6 +81,10 @@ class BookController extends Controller
      */
     public function edit($bookId)
     {
+        $book = \App\Book::find($bookId);
+        if(Auth::User()->id == $book->user_id){
+            return view("book/show", Array("book"=>$book));
+        }
         $book = \App\Book::find($bookId);
         return view("book/edit", Array("book"=>$book));
     }
@@ -91,6 +98,10 @@ class BookController extends Controller
      */
     public function update($bookId)
     {
+        $book = \App\Book::find($bookId);
+        if(Auth::User()->id == $book->user_id){
+            return view("book/show", Array("book"=>$book));
+        }
         
         $book = \App\Book::find($bookId);
         $attributes = request()->validate([

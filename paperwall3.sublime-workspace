@@ -416,24 +416,25 @@
 			"file": "resources/views/book/show.blade.php",
 			"settings":
 			{
-				"buffer_size": 3355,
+				"buffer_size": 3631,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "resources/views/home.blade.php",
+			"file": "public/js/app.js",
 			"settings":
 			{
-				"buffer_size": 672,
-				"line_ending": "Unix"
+				"buffer_size": 328685,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "public/css/app.css",
 			"settings":
 			{
-				"buffer_size": 148321,
+				"buffer_size": 148442,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -460,16 +461,53 @@
 			"file": "app/Http/Controllers/BookController.php",
 			"settings":
 			{
-				"buffer_size": 2549,
+				"buffer_size": 3113,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "routes/web.php",
+			"file": "database/migrations/2020_03_03_203809_fix_books_for_auth.php",
 			"settings":
 			{
-				"buffer_size": 1040,
+				"buffer_size": 540,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "composer.json",
+			"settings":
+			{
+				"buffer_size": 1544,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<?php\n\n/*\n|--------------------------------------------------------------------------\n| Web Routes\n|--------------------------------------------------------------------------\n|\n| Here is where you can register web routes for your application. These\n| routes are loaded by the RouteServiceProvider within a group which\n| contains the \"web\" middleware group. Now create something great!\n|\n*/\n\nRoute::get('/', function () {\n    return view('welcome');\n});\n\nAuth::routes();\n\nRoute::get('/home', \t\t\t\t'HomeController@index')->name('home');\n\nRoute::get('/books/', \t\t\t\t'BookController@index')->name('home');\nRoute::get('/books/{bookId}', \t\t'BookController@show')->name('home');\nRoute::POST(\"/books/\", \t\t\t\t\"BookController@create\");\nRoute::GET(\"/books/{bookId}/edit\",  \"BookController@edit\");\nRoute::POST(\"/books/{bookId}\",\t\t\"BookController@update\");\nRoute::DELETE(\"/books/{bookId}\",\t\"BookController@destroy\");\n\nRoute::POST(\"/books/{bookId}/new\", \t\"LeafController@store\")->middleware(\"auth\");\nRoute::PUT(\"/leaves/{leafId}\", \t\t\"LeafController@edit\");\n\nRoute::GET('/user/{userId}'],\t\t\"UserController@profile\");",
+			"file": "routes/web.php",
+			"file_size": 1040,
+			"file_write_time": 132273875220055915,
+			"settings":
+			{
+				"buffer_size": 1098,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "resources/views/user/view.blade.php",
+			"settings":
+			{
+				"buffer_size": 1012,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "resources/views/layouts/app.blade.php",
+			"settings":
+			{
+				"buffer_size": 3633,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -563,7 +601,19 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/cakeo/code/paperWall3"
+		"/C/Users/cakeo/code/paperWall3",
+		"/C/Users/cakeo/code/paperWall3/app",
+		"/C/Users/cakeo/code/paperWall3/app/Http",
+		"/C/Users/cakeo/code/paperWall3/app/Http/Controllers",
+		"/C/Users/cakeo/code/paperWall3/public",
+		"/C/Users/cakeo/code/paperWall3/public/js",
+		"/C/Users/cakeo/code/paperWall3/resources",
+		"/C/Users/cakeo/code/paperWall3/resources/views",
+		"/C/Users/cakeo/code/paperWall3/resources/views/book",
+		"/C/Users/cakeo/code/paperWall3/resources/views/layouts",
+		"/C/Users/cakeo/code/paperWall3/resources/views/templates",
+		"/C/Users/cakeo/code/paperWall3/resources/views/user",
+		"/C/Users/cakeo/code/paperWall3/routes"
 	],
 	"file_history":
 	[
@@ -858,7 +908,7 @@
 						"translation.y": 60.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
@@ -867,15 +917,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3355,
+						"buffer_size": 3631,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10,
-								31
+								912,
+								912
 							]
 						],
 						"settings":
@@ -884,7 +934,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 545.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -892,11 +942,11 @@
 				},
 				{
 					"buffer": 2,
-					"file": "resources/views/home.blade.php",
+					"file": "public/js/app.js",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 672,
+						"buffer_size": 328685,
 						"regions":
 						{
 						},
@@ -909,15 +959,13 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -926,15 +974,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 148321,
+						"buffer_size": 148442,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1366,
-								1366
+								1260,
+								1260
 							]
 						],
 						"settings":
@@ -945,7 +993,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -972,10 +1020,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1656.0,
+						"translation.y": 342.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -1004,7 +1052,7 @@
 						"translation.y": 216.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
@@ -1013,15 +1061,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2549,
+						"buffer_size": 3113,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1678,
-								1678
+								1518,
+								1518
 							]
 						],
 						"settings":
@@ -1031,27 +1079,87 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 2088.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "routes/web.php",
+					"file": "database/migrations/2020_03_03_203809_fix_books_for_auth.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1040,
+						"buffer_size": 540,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								469,
-								469
+								539,
+								539
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "composer.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1544,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								444,
+								444
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/zzz A File Icon zzz/aliases/JSON (Composer).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1098,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								600,
+								670
 							]
 						],
 						"settings":
@@ -1059,10 +1167,69 @@
 							"syntax": "Packages/PHP/PHP.sublime-syntax"
 						},
 						"translation.x": 0.0,
+						"translation.y": 198.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "resources/views/user/view.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								654,
+								654
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "resources/views/layouts/app.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3633,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								865,
+								865
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Laravel Blade Highlighter/blade.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1117,6 +1284,10 @@
 		"selected_items":
 		[
 			[
+				"",
+				"public\\css\\app.css"
+			],
+			[
 				"main.css",
 				"pup\\public\\css\\main.css"
 			],
@@ -1151,10 +1322,6 @@
 			[
 				"main",
 				"public\\css\\main.css"
-			],
-			[
-				"",
-				"resources\\views\\group\\index.blade.php"
 			],
 			[
 				"itemgroup",
